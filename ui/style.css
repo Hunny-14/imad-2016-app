@@ -8,6 +8,10 @@ body {
     text-align: center;
 }
 
+.right{
+    text-align: right;
+}
+
 .text-big {
     font-size: 300%;
 }
@@ -19,4 +23,5 @@ body {
 .img-medium {
     height: 200px;
 }
+
 
