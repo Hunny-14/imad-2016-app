@@ -35,6 +35,7 @@ function createhtml(article){
         <meta name="view port" content="width=device-width, initial-scale=1">
     </head>
    <body>
+   <div class="container">
     <div>
     <a href="/">Home</a>
     <div class="right">
@@ -48,6 +49,7 @@ function createhtml(article){
    
     <div>
         ${article.content}
+    </div>
     </div>
     </body>
     
