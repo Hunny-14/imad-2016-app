@@ -70,17 +70,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:c', function (req, res) {
-    var articlename=req.params.c;
+app.get('/:urlstorag', function (req, res) {
+    var articlename=req.params.urlstorage;
   res.send(createhtml(articles[articlename]));
-});
-
-app.get('/article-two', function (req, res) {
-  res.send('Article two will be displayed');
-});
-
-app.get('/article-three', function (req, res) {
-  res.send('Article three will be displayed');
 });
 
 
