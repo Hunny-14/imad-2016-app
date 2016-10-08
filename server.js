@@ -5,12 +5,69 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleone={
+    title: 'article-one| Hunny',
+    date: 'October 8,2016',
+    heading: 'Article one',
+    content: `<p>
+            Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.
+
+        </p>
+         <p>
+            Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.
+
+        </p>
+         <p>
+            Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.Hey this is my first article.
+
+        </p>`
+}
+
+function createhtml(article){
+    
+    var htmlfile=`
+        <html>
+    <head>
+        <link href="/ui/style.css" rel="stylesheet" />
+        <title>
+           ${article.title}
+        </title>
+        <meta name="view port" content="width=device-width, initial-scale=1">
+    </head>
+   <body>
+    <div>
+    <a href="/">Home</a>
+    <div class="right">
+        ${article.date}
+    </div>
+    </div>
+    <hr/>
+    <h1>
+        ${article.heading}
+    </h1>
+   
+    <div>
+        ${article.content}
+    </div>
+    </body>
+    
+    
+</html>`;
+
+return htmlfile;        
+    
+}
+    
+    
+    
+    
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(createhtml(articleone));
 });
 
 app.get('/article-two', function (req, res) {
