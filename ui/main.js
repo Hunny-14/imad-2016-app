@@ -25,6 +25,9 @@ var button=document.getElementById("counter");
 var count=document.getElementById("count");
 var counter=0;
 button.onclick=function(){
+    var request= new XMLHttpRequest();
+    request.open("GET","")
+    
   counter+=1;
   count.innerHTML=counter.toString();
 }
