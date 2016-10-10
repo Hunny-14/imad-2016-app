@@ -32,9 +32,11 @@ button.onclick=function(){
     {
         if(request.status==200)
         {
-            alert(request.responseText);
+              var counter =request.responseText;
+              
+  count.innerHTML=counter.toString();
         }
-        else alert("not able to exicute");
+        
     }
     
 
