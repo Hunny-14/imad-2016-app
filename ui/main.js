@@ -21,9 +21,9 @@ content.onclick = function(){
     var interval = setInterval(moveright, 50);
 }
 
-var counter=document.getElementById("counter");
+var button=document.getElementById("counter");
 var count=document.getElementById("count")
-counter.onclick=function(){
+button.onclick=function(){
   counter+=1;
   count.innerHTML=counter;
 }
