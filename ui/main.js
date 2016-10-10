@@ -22,8 +22,8 @@ content.onclick = function(){
 }
 
 var counter=document.getElementById("counter");
-var count;
+var count=document.getElementById("count")
 counter.onclick=function(){
   counter+=1;
-  span.innerHTML=counter;
+  count.innerHTML=counter;
 }
