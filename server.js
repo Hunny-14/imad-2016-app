@@ -70,9 +70,13 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/counter',function(req,res){
+    counter+=1;
+    res.send(counter.toString());
+});
 
 
-app.get('/:urlstorag', function (req, res) {
+app.get('/:urlstorage', function (req, res) {
     var articlename=req.params.urlstorage;
   res.send(createhtml(articles[articlename]));
 });
