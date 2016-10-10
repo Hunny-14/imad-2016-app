@@ -26,8 +26,14 @@ var count=document.getElementById("count");
 var counter=0;
 button.onclick=function(){
     var request= new XMLHttpRequest();
-    request.open("GET","")
+    request.open("GET","http://hunny-14.imad.hasura-app.io/counter",true);
+    if(request.onreadystatechange==XMLHttpRequest.Done)
+    {
+        if(request.status==200)
+        {
+            alert(request.responseText);
+        }
+    }
     
-  counter+=1;
-  count.innerHTML=counter.toString();
+
 }
