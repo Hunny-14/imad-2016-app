@@ -11,5 +11,5 @@ function moveright()
     pic.marginleft=marginleft;
 }
 pic.onlick=function(){
-    setInterval(moverright,100)
+   var interval= setInterval(moverright,100)
 }
