@@ -31,6 +31,7 @@ button.onclick=function(){
     {
         if(request.status===200)
         {
+            alert("request status is 200 ");
             alert(request.responseText.toString());
               var counter =request.responseText;
               var span=document.getElementById("count");
