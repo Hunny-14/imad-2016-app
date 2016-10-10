@@ -26,6 +26,7 @@ var button=document.getElementById("counter");
 button.onclick=function(){
     var request= new XMLHttpRequest();
     request.open("GET","http://hunny-14.imad.hasura-app.io/counter",true);
+    request.send(null);
     request.onreadystatechange=function(){
         if(request.onreadystatechange===XMLHttpRequest.DONE)
     {
