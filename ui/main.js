@@ -22,8 +22,7 @@ content.onclick = function(){
 }
 
 var button=document.getElementById("counter");
-var count=document.getElementById("count");
-var counter=0;
+
 button.onclick=function(){
     var request= new XMLHttpRequest();
     request.open("GET","http://hunny-14.imad.hasura-app.io/counter",true);
@@ -33,8 +32,8 @@ button.onclick=function(){
         if(request.status==200)
         {
               var counter =request.responseText;
-              
-  count.innerHTML=counter.toString();
+              var span=document.getElementById("count");
+              span.innerHTML=counter.toString();
         }
         
     }
