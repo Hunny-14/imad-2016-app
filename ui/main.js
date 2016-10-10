@@ -37,6 +37,9 @@ button.onclick=function(){
               var span=document.getElementById("count");
               span.innerHTML=counter.toString();
         }
+        else{
+            alert("request state is 500");
+        }
         
     }
      request.open("GET","http://hunny-14.imad.hasura-app.io/counter",true);
