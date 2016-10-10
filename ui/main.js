@@ -16,6 +16,7 @@ img.onclick = function(){
     var interval = setInterval(moveright, 50);
 }
 marginLeft=0;
-text.onclick = function(){
+
+content.onclick = function(){
     var interval = setInterval(moveright, 50);
 }
