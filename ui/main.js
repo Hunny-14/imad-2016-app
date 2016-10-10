@@ -42,6 +42,9 @@ button.onclick=function(){
         }
         
     }
+    else{
+        alert("processing");
+    }
      request.open("GET","http://hunny-14.imad.hasura-app.io/counter",true);
     request.send(null);
     
