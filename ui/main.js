@@ -4,4 +4,12 @@ console.log('Loaded!');
 //to move the image
 
 var img = document.getElementById('madi');
-img.style.marginLeft = '100px';
+var marginLeft=0;
+function moveright ()
+{
+    marginleft = marginLeft + 10;
+    img.style.marginLeft = marginLeft + 'px';
+}
+img.onlick = function(){
+   var interval = setInterval(moveright, 100)
+};
