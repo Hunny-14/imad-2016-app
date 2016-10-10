@@ -20,3 +20,10 @@ marginLeft=0;
 content.onclick = function(){
     var interval = setInterval(moveright, 50);
 }
+
+var counter=document.getElementById("counter");
+var count;
+counter.onclick=function(){
+  counter+=1;
+  span.innerHTML=counter;
+}
