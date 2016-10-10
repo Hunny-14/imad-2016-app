@@ -33,6 +33,7 @@ button.onclick=function(){
         {
             alert(request.responseText);
         }
+        else alert("not able to exicute");
     }
     
 
