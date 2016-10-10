@@ -22,7 +22,8 @@ content.onclick = function(){
 }
 
 var button=document.getElementById("counter");
-var count=document.getElementById("count")
+var count=document.getElementById("count");
+var counter=0;
 button.onclick=function(){
   counter+=1;
   count.innerHTML=counter.toString();
