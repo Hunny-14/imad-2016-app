@@ -74,12 +74,7 @@ app.get('/counter',function(req,res){
     counter+=1;
     res.send(counter.toString());
 });
-var names=[];
-app.get('/submit-name', funtion(req,res){
-    var name=res.query.submit-name;
-    names.push(name);
-    res.send(JSON.stringify(names));
-});
+
 app.get('/:urlstorage', function (req, res) {
     var articlename=req.params.urlstorage;
   res.send(createhtml(articles[articlename]));
