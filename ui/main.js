@@ -21,4 +21,9 @@ button.onclick = function(){
 };
 };
 
+var sumbit=document.getElementById("sub_btn");
+submit.onclick=funtion(){
+    var amount=document.getElementById("amount").value;
+    
+}
 
