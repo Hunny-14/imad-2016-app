@@ -38,6 +38,9 @@ submit.onclick = function(){
               span.innerHTML=list.toString();
         }
         
+          else{
+        alert("not running");
+    }
        
         
     }
