@@ -25,7 +25,7 @@ var submit=document.getElementById("sub_btn");
 submit.onclick = function(){
     var amount=document.getElementById("amount").value;
     var request= new XMLHttpRequest();
-    request.open("https://www.flipkart.com/search?q=mobile%20phone%20for%20"+amount+"&otracker=start&as-show=on&as=off");
+    request.open("GET","https://www.flipkart.com/search?q=mobile%20phone%20for%20"+amount+"&otracker=start&as-show=on&as=off",true);
     request.send(null);
     request.onreadystatechange = function() {
         if(request.readyState === XMLHttpRequest.DONE)
@@ -37,6 +37,7 @@ submit.onclick = function(){
               var check=document.getElementById("check");
               span.innerHTML=list.toString();
         }
+        
        
         
     }
