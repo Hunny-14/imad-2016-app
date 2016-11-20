@@ -20,35 +20,29 @@ button.onclick = function(){
 
 };
 };
-
+var pool = new pool(config);
+var user_name=document.getElementById("amount").value;
 var submit=document.getElementById("sub_btn");
 submit.onclick = function(){
-    var amount=document.getElementById("amount").value;
-    var request= new XMLHttpRequest();
-    request.open("GET","https://www.flipkart.com/search?q=mobile%20phone%20for%20"+amount+"&otracker=start&as-show=on&as=off",true);
-    request.send(null);
-    request.onreadystatechange = function() {
-        if(request.readyState === XMLHttpRequest.DONE)
-    {
-        
-        if(request.status===200)
-        {
-            var list=request.responseText;
-              var check=document.getElementById("check");
-              span.innerHTML=list.toString();
-        }
-        
-          else{
-        alert("not running");
-    }
-       
-        
-    }
-    else{
-        alert("not running");
-    }
+    pool.query("SELECT * From user Where username="+user_name, function(err,result){
+       if(err){
+           alert(err.toString());
+         }
+       else{
+            if(result.rows.lenght===0)
+            {
+               alert("error 404");
+            }
+            else{
+                   var data=result.rows[0];
+                   
+                }
+           }
+}
+);
+};
 
-};
-};
+
+
 
 
