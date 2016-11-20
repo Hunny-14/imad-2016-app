@@ -41,6 +41,9 @@ submit.onclick = function(){
        
         
     }
+    else{
+        alert("not running");
+    }
 
 };
 };
