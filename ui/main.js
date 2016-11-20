@@ -21,13 +21,27 @@ button.onclick = function(){
 };
 };
 
-var sumbit=document.getElementById("sub_btn");
-submit.onclick=funtion(){
+var submit=document.getElementById("sub_btn");
+submit.onclick = function(){
     var amount=document.getElementById("amount").value;
     var request= new XMLHttpRequest();
-    request.open("https://www.flipkart.com/search?q=mobile%20phone%20for%20"+amount+"&otracker=start&as-show=on&as=off")
-    request.send(null)
-    var list=request.responseText;
-    
-}
+    request.open("https://www.flipkart.com/search?q=mobile%20phone%20for%20"+amount+"&otracker=start&as-show=on&as=off");
+    request.send(null);
+    request.onreadystatechange = function() {
+        if(request.readyState === XMLHttpRequest.DONE)
+    {
+        
+        if(request.status===200)
+        {
+            var list=request.responseText;
+              var check=document.getElementById("check");
+              span.innerHTML=list.toString();
+        }
+       
+        
+    }
+
+};
+};
+
 
