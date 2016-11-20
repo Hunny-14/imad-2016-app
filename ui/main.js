@@ -1,3 +1,12 @@
+var pool = require('pg').Pool;
+var config = {
+  host: 'db.imad.hasura.io',
+  user: 'Hunny-14',
+  password: process.env.DB_PASSWORD,
+  port : '5432',
+  database: 'Hunny-14',
+};
+
 var button=document.getElementById("counter");
 
 button.onclick = function(){
