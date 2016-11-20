@@ -1,6 +1,14 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var pool = require('pg').Pool;
+var config = {
+  host: 'db.imad.hasura.io',
+  user: 'Hunny-14',
+  password: 'db-hunny-14-90961',
+  database: 'Hunny-14',
+};
+
 
 var app = express();
 app.use(morgan('combined'));
